@@ -78,24 +78,24 @@
         <!-- Content will be loaded here -->
             <div class="intro">
 <div id="introIMG">
-  <img  class="imgPlaceHolder" src="/placeholder.png" alt="">
+  <img id="imgPlaceHolder" class="imgPlaceHolder" src="" alt="">
 
     <!-- <p class="img">img</p> -->
 </div>
 <div class="intro-bottom">
 
-    <p>name</p>
-    <p>Type: Grass, Poison</p>
+    <p id="name">name</p>
+    <p id="type">Type: </p>
 </div>
             </div>
             <div id="details" style="display: none;">
 
-                <p>HP 45</p>
-                <p>Attack 49 </p>
-                <p>Defense 49</p>
-                <p>Sp. Attack 65</p>
-                <p>SP. Defense 65</p>
-                <p>Speed 45</p>
+                <p id="hp">HP: </p>
+                <p id="atk">Attack: </p>
+                <p id="def">Defense: </p>
+                <p id="sp-atk">Sp. Attack: </p>
+                <p id="sp-def">SP. Defense: </p>
+                <p id="speed">Speed :</p>
             </div>
     </main>
 
@@ -127,8 +127,34 @@
         .then(res => res.json())
         .then(data => {
             source = data
+            // document.getElementById('name').innerHTML = data[0].name['english']
+            // console.log(data[0])
+            // document.getElementById('type').innerHTML = data[0].type
+            // console.log(data[0].name['english'])
+            // console.log(data[0].base)
+            // console.log(data[0].base['HP'])
+            document.getElementById('hp').innerHTML += data[0].base['HP']
+            // console.log(data[0].base['Attack'])
+            document.getElementById('atk').innerHTML += data[0].base['Attack']
+            // console.log(data[0].base['Defense'])
+            document.getElementById('def').innerHTML += data[0].base['Defense']
+            // console.log(data[0].base['Sp. Attack'])
+            document.getElementById('sp-atk').innerHTML += data[0].base['Sp. Attack']
+            // console.log(data[0].base['Sp. Defense'])
+            document.getElementById('sp-def').innerHTML += data[0].base['Sp. Defense']
+            // console.log(data[0].base['Speed'])
+            document.getElementById('speed').innerHTML += data[0].base['Speed']
+            // console.log(data[0].type)
             // console.log(source)
+            data.forEach(element => {
+                // console.log(element.name['english'])
+                // console.log(element[0].name)
+
+            });
         })
+
+        console.log(Object.keys(source))
+
         const fetchBtn = document.getElementById("fetchBTN");
         fetchBtn.addEventListener('click', () => {
             // Make a request to the server
@@ -140,7 +166,11 @@
                 // root.append(`<p>${data.results[0].url}</p>`)
                 let namePok = p.textContent = data.results[0].name
                 // let urlPoke = p.textContent = data.results[0].url
-                root.append(namePok)
+                // root.append(namePok)
+                let name = data.results[0]['name']
+                document.getElementById('name').innerHTML = name
+                console.log('name⬇️')
+                console.log(data.results[0]['name'])
                 const link = data.results[0].url
                 return fetch(link)
             })
@@ -153,8 +183,16 @@
                 let img = document.createElement('img')
                 img.src = linkData.sprites.front_default
                 let introimg = document.getElementById('introIMG')
-                introimg.append(img)
+                let imgToBe = document.getElementById('imgPlaceHolder').src = linkData.sprites.front_default
+                // introimg.append(imgToBe)
                 // root.append(img)
+                console.log(linkData.types)
+                console.log(linkData.types['name'])
+                console.log(linkData.types[0].type['name'])
+                console.log(linkData.types[1].type['name'])
+                let type1 = linkData.types[0].type['name']
+                let type2 = linkData.types[1].type['name']
+                let types = document.getElementById('type').innerHTML = `Type: ${type1} ${type2}`
             })
         })
     </script>
