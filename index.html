@@ -5,12 +5,121 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        main {
+            display: flex;
+            border: 5px solid purple;
+            justify-content: space-between;
+            flex-direction: row;
+            width: 50%;
+            height: 312px;
+
+            align-items: start;
+        }
+        main div {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+        }
+        .intro {
+            border: 1px solid black;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+
+
+        }
+        .intro-bottom {
+            display:flex;
+            align-items: center;
+            border-top: 10px ridge blue; /* add type of color of pokemon!! dynamical! */
+            flex-direction: column;
+            margin-bottom: 0px;
+
+        }
+        .details {
+            border: 4px solid black;
+            display: flex;
+            align-items: center;
+            transition: 2s ease-in;
+        }
+        .introImg img {
+            border: 10px solid black;
+            align-items: center;
+            text-align: center;
+            height: 150px;
+            margin-top: 0px;
+            /* border: 1px solid black;; */
+            width: 100%;
+        }
+        #introIMG {
+            /* border: 21px solid green; */
+            width: 100%;
+            height: 65%;
+            width: 100%;
+            align-items: center;
+        }
+
+        .imgPlaceHolder {
+            width: 100%;
+            min-height: 100%;
+            /* object-fit: contain; */
+            object-fit: cover;
+        }
+
+
+    </style>
 </head>
 <body>
     <button id="fetchBTN">Fetch</button>
+
+    <main>
+        <!-- Content will be loaded here -->
+            <div class="intro">
+<div id="introIMG">
+  <img  class="imgPlaceHolder" src="/placeholder.png" alt="">
+
+    <!-- <p class="img">img</p> -->
+</div>
+<div class="intro-bottom">
+
+    <p>name</p>
+    <p>Type: Grass, Poison</p>
+</div>
+            </div>
+            <div id="details" style="display: none;">
+
+                <p>HP 45</p>
+                <p>Attack 49 </p>
+                <p>Defense 49</p>
+                <p>Sp. Attack 65</p>
+                <p>SP. Defense 65</p>
+                <p>Speed 45</p>
+            </div>
+    </main>
+
+
     <div id="root"></div>
     <script>
+
         let source = {}
+
+
+
+        let main = document.querySelector('main')
+        main.addEventListener('click', () => {
+            console.log('heey')
+            let details = document.getElementById('details')
+            let of_on = false
+            if (details.style.display === "none") {
+                details.style.display = "flex"
+            }
+            else {
+                details.style.display = "none"
+            }
+
+        })
 
         let root = document.getElementById('root')
         let p = document.createElement('p')
@@ -43,7 +152,9 @@
                 // root.append(`<img src="${linkImages}">`)
                 let img = document.createElement('img')
                 img.src = linkData.sprites.front_default
-                root.append(img)
+                let introimg = document.getElementById('introIMG')
+                introimg.append(img)
+                // root.append(img)
             })
         })
     </script>
