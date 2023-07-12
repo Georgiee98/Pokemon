@@ -575,7 +575,7 @@
     {
     "id": 29,
     "name": {
-    "english": "Nidoran♀",
+    "english": "Nidoran-f",
     "japanese": "ニドラン♀",
     "chinese": "尼多兰",
     "french": "Nidoran♀"
@@ -636,7 +636,7 @@
     {
     "id": 32,
     "name": {
-    "english": "Nidoran♂",
+    "english": "Nidoran-m",
     "japanese": "ニドラン♂",
     "chinese": "尼多朗",
     "french": "Nidoran♂"
@@ -1681,7 +1681,7 @@
     {
     "id": 83,
     "name": {
-    "english": "Farfetch'd",
+    "english": "farfetchd",
     "japanese": "カモネギ",
     "chinese": "大葱鸭",
     "french": "Canarticho"
@@ -2475,7 +2475,7 @@
     {
     "id": 122,
     "name": {
-    "english": "Mr. Mime",
+    "english": "Mr-mime",
     "japanese": "バリヤード",
     "chinese": "魔墙人偶",
     "french": "M. Mime"
@@ -7884,7 +7884,7 @@
     {
     "id": 386,
     "name": {
-    "english": "Deoxys",
+    "english": "Deoxys-normal",
     "japanese": "デオキシス",
     "chinese": "代欧奇希斯",
     "french": "Deoxys"
@@ -8436,7 +8436,7 @@
     {
     "id": 413,
     "name": {
-    "english": "Wormadam",
+    "english": "wormadam-plant",
     "japanese": "ミノマダム",
     "chinese": "结草贵妇",
     "french": "Cheniselle"
@@ -8968,7 +8968,7 @@
     {
     "id": 439,
     "name": {
-    "english": "Mime Jr.",
+    "english": "Mime-jr",
     "japanese": "マネネ",
     "chinese": "魔尼尼",
     "french": "Mime Jr"
@@ -9956,7 +9956,7 @@
     {
     "id": 487,
     "name": {
-    "english": "Giratina",
+    "english": "Giratina-altered",
     "japanese": "ギラティナ",
     "chinese": "骑拉帝纳",
     "french": "Giratina"
@@ -10057,7 +10057,7 @@
     {
     "id": 492,
     "name": {
-    "english": "Shaymin",
+    "english": "Shaymin-land",
     "japanese": "シェイミ",
     "chinese": "谢米",
     "french": "Shaymin"
@@ -11236,7 +11236,7 @@
     {
     "id": 550,
     "name": {
-    "english": "Basculin",
+    "english": "Basculin-red-striped",
     "japanese": "バスラオ",
     "chinese": "野蛮鲈鱼",
     "french": "Bargantua"
@@ -11339,7 +11339,7 @@
     {
     "id": 555,
     "name": {
-    "english": "Darmanitan",
+    "english": "darmanitan-standard",
     "japanese": "ヒヒダルマ",
     "chinese": "达摩狒狒",
     "french": "Darumacho"
@@ -13103,7 +13103,7 @@
     {
     "id": 641,
     "name": {
-    "english": "Tornadus",
+    "english": "genesect",
     "japanese": "トルネロス",
     "chinese": "龙卷云",
     "french": "Boréas"
@@ -13123,7 +13123,7 @@
     {
     "id": 642,
     "name": {
-    "english": "Thundurus",
+    "english": "thundurus-incarnate",
     "japanese": "ボルトロス",
     "chinese": "雷电云",
     "french": "Fulguris"
@@ -13186,7 +13186,7 @@
     {
     "id": 645,
     "name": {
-    "english": "Landorus",
+    "english": "landorus-incarnate",
     "japanese": "ランドロス",
     "chinese": "土地云",
     "french": "Démétéros"
@@ -13228,7 +13228,7 @@
     {
     "id": 647,
     "name": {
-    "english": "Keldeo",
+    "english": "keldeo-ordinary",
     "japanese": "ケルディオ",
     "chinese": "凯路迪欧",
     "french": "Keldeo"
@@ -13249,7 +13249,7 @@
     {
     "id": 648,
     "name": {
-    "english": "Meloetta",
+    "english": "Meloetta-aria",
     "japanese": "メロエッタ",
     "chinese": "美洛耶塔",
     "french": "Meloetta"
@@ -13681,7 +13681,7 @@
     {
     "id": 669,
     "name": {
-    "english": "Flabébé",
+    "english": "flabebe",
     "japanese": "フラベベ",
     "chinese": "花蓓蓓",
     "french": "Flabébé"
@@ -13862,7 +13862,7 @@
     {
     "id": 678,
     "name": {
-    "english": "Meowstic",
+    "english": "meowstic-male",
     "japanese": "ニャオニクス",
     "chinese": "超能妙喵",
     "french": "Mistigrix"
@@ -13924,7 +13924,7 @@
     {
     "id": 681,
     "name": {
-    "english": "Aegislash",
+    "english": "aegislash-shield",
     "japanese": "ギルガルド",
     "chinese": "坚盾剑怪",
     "french": "Exagide"
@@ -14523,7 +14523,7 @@
     {
     "id": 710,
     "name": {
-    "english": "Pumpkaboo",
+    "english": "pumpkaboo-average",
     "japanese": "バケッチャ",
     "chinese": "南瓜精",
     "french": "Pitrouille"
@@ -14544,7 +14544,7 @@
     {
     "id": 711,
     "name": {
-    "english": "Gourgeist",
+    "english": "gourgeist-average",
     "japanese": "パンプジン",
     "chinese": "南瓜怪人",
     "french": "Banshitrouye"
@@ -14688,7 +14688,7 @@
     {
     "id": 718,
     "name": {
-    "english": "Zygarde",
+    "english": "zygarde-50",
     "japanese": "ジガルデ",
     "chinese": "基格尔德",
     "french": "Zygarde"
@@ -15163,7 +15163,7 @@
     {
     "id": 741,
     "name": {
-    "english": "Oricorio",
+    "english": "oricorio-baile",
     "japanese": "オドリドリ",
     "chinese": "花舞鸟",
     "french": "Plumeline"
@@ -15246,7 +15246,7 @@
     {
     "id": 745,
     "name": {
-    "english": "Lycanroc",
+    "english": "lycanroc-midday",
     "japanese": "ルガルガン",
     "chinese": "鬃岩狼人",
     "french": "Lougaroc"
@@ -15266,7 +15266,7 @@
     {
     "id": 746,
     "name": {
-    "english": "Wishiwashi",
+    "english": "wishiwashi-solo",
     "japanese": "ヨワシ",
     "chinese": "弱丁鱼",
     "french": "Froussardine"
@@ -15801,7 +15801,7 @@
     {
     "id": 772,
     "name": {
-    "english": "Type: Null",
+    "english": "type-null",
     "japanese": "タイプ：ヌル",
     "chinese": "属性：空",
     "french": "Silvallié"
@@ -15841,7 +15841,7 @@
     {
     "id": 774,
     "name": {
-    "english": "Minior",
+    "english": "minior-red-meteor",
     "japanese": "メテノ",
     "chinese": "小陨星",
     "french": "Dodoala"
@@ -15924,7 +15924,7 @@
     {
     "id": 778,
     "name": {
-    "english": "Mimikyu",
+    "english": "mimikyu-disguised",
     "japanese": "ミミッキュ",
     "chinese": "谜拟Ｑ",
     "french": "Denticrisse"
@@ -16070,7 +16070,7 @@
     {
     "id": 785,
     "name": {
-    "english": "Tapu Koko",
+    "english": "Tapu-Koko",
     "japanese": "カプ・コケコ",
     "chinese": "卡璞・鸣鸣",
     "french": "Tokopiyon"
@@ -16091,7 +16091,7 @@
     {
     "id": 786,
     "name": {
-    "english": "Tapu Lele",
+    "english": "Tapu-Lele",
     "japanese": "カプ・テテフ",
     "chinese": "卡璞・蝶蝶",
     "french": "Tokotoro"
@@ -16112,7 +16112,7 @@
     {
     "id": 787,
     "name": {
-    "english": "Tapu Bulu",
+    "english": "Tapu-bulu",
     "japanese": "カプ・ブルル",
     "chinese": "卡璞・哞哞",
     "french": "Tokopisco"
@@ -16133,7 +16133,7 @@
     {
     "id": 788,
     "name": {
-    "english": "Tapu Fini",
+    "english": "Tapu-Fini",
     "japanese": "カプ・レヒレ",
     "chinese": "卡璞・鳍鳍",
     "french": "Cosmog"

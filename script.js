@@ -101,6 +101,7 @@ fetch("./source.json")
     fetch(`https://pokeapi.co/api/v2/pokemon/${fetchUrl}`)
     .then((response) => response.json())
     .then((data) => {
+        console.log
         // console.log(data.sprites['front_default'])
         let pokemonImage = document.createElement("img");
         pokemonImage.setAttribute("id", "imgPlaceHolder");
