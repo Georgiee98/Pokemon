@@ -8,16 +8,18 @@
 fetch("./source.json")
 .then((res) => res.json())
 .then((data) => {
+  let body = document.querySelector("body");
+  let container = document.createElement("div");
+  container.setAttribute("class", "screen");
+  body.appendChild(container);
+  let subContainer = document.createElement("div");
+  subContainer.setAttribute("class", "sub-container");
+
+
+  container.appendChild(subContainer);
   data.forEach((pokemon) => {
-    let body = document.querySelector("body");
 
-    let container = document.createElement("div");
-    container.setAttribute("class", "screen");
-    body.appendChild(container);
 
-    let subContainer = document.createElement("div");
-    subContainer.setAttribute("class", "sub-container");
-    container.appendChild(subContainer);
 
     // Card Body
     let main = document.createElement("main");
@@ -106,7 +108,7 @@ fetch("./source.json")
         let pokemonImage = document.createElement("img");
         pokemonImage.setAttribute("id", "imgPlaceHolder");
         pokemonImage.setAttribute("class", "imgPlaceHolder");
-        pokemonImage.src = data.sprites['front_default'];
+        pokemonImage.src = data.sprites.other.home['front_default'];
 
         introIMG.appendChild(pokemonImage);
     })
