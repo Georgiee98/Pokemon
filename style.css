@@ -1,6 +1,11 @@
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+  font-family: Roboto;
+}
+
 main {
   display: flex;
-  border: 5px solid purple;
+  /* border: 5px solid purple; */
   justify-content: space-between;
   flex-direction: row;
   width: 100%;
@@ -8,6 +13,49 @@ main {
   max-width: 400px;
   height: 312px;
   align-items: start;
+  position:relative;
+  /* border:1px solid black; */
+  box-shadow: rgba(0, 0, 0, 0.25) -1.95px -1.95px 5.6px;
+}
+
+main::after, main::before {
+  position:absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  transition: 2s;
+
+
+}
+
+main::after {
+  top: -15px;
+  left: -15px;
+  border-top: 15px solid transparent;
+  border-left: 15px solid transparent;
+}
+main:before {
+  bottom: -15px;
+  right: -15px;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid transparent
+}
+
+main:hover {
+  /* background-color: #0668C9; */
+  cursor: pointer;;
+
+
+}
+
+main:hover::after,
+main:hover::before {
+  width: calc(100% + 14px);
+  height: calc(100% + 14px);
+  border-color: blue;
+  border-radius: 5px;
+
+
 }
 main div {
   display: flex;
@@ -15,32 +63,40 @@ main div {
   width: 100%;
 }
 .intro {
-  border: 1px solid black;
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  /* border-top: 10px ridge blue; */
+  border-right: 10px ridge blue;
+  /* border-left: 10px ridge blue; */
 }
 .intro-bottom {
   display: flex;
   align-items: center;
-  border-top: 10px ridge blue; /* add type of color of pokemon!! dynamical! */
+  border-top: 10px ridge blue;
+  /* border-bottom: 10px ridge blue; */
   flex-direction: column;
   margin-bottom: 0px;
 }
 .details {
   padding-left: 20px;
-  border: 20px solid black;
   display: flex;
-  align-items: center;
+  align-items: start;
   transition: 2s ease-in;
 }
+.details p {
+  border-bottom: 2px groove black;
+
+}
 .introImg img {
-  border: 10px solid black;
+  /* border: 10px solid black; */
   align-items: center;
   text-align: center;
   height: 150px;
   margin-top: 0px;
   /* border: 1px solid black;; */
+  /* min-width: 50%; */
+  min-width: 70%;
   width: 100%;
 }
 #introIMG {

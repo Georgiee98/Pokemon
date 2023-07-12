@@ -53,7 +53,7 @@ fetch("./source.json")
     // Right Side of Card
 
     let details = document.createElement("div");
-    details.setAttribute("id", "details");
+    details.setAttribute("class", "details");
     details.style.display = "flex";
 
     main.appendChild(details);
