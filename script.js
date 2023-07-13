@@ -205,27 +205,27 @@ fetch("source.json")
 
     pokemonHP.textContent = 'HP: ' + pokemon.base['HP']
     // pokemonHP_div.style.width = pokemon.base['HP'] > 119 ? "119%" : pokemon.base['HP'] + "%"
-    pokemonHPStatsFullWidth.style.width = pokemon.base['HP'] > 119 ? "119%" : pokemon.base['HP'] + "%"
+    pokemonHPStatsFullWidth.style.width = pokemon.base['HP'] > 100 ? "100%" : pokemon.base['HP'] + "%"
 
     pokemonATK.textContent = 'Attack: ' + pokemon.base['Attack']
     // pokemonATK.style.width = pokemon.base['Attack'] > 119 ? "119%" :pokemon.base['Attack'] + "%"
-    pokemonATKStatsFullWidth.style.width = pokemon.base['HP'] > 119 ? "119%" : pokemon.base['HP'] + "%"
+    pokemonATKStatsFullWidth.style.width = pokemon.base['Attack'] > 100 ? "100%" : pokemon.base['Attack'] + "%"
 
     pokemonDEF.textContent = 'Defense: ' + pokemon.base['Defense']
     // pokemonDEF.style.width = pokemon.base['Defense'] > 119 ? "119%" : pokemon.base['Defense'] + "%"
-    pokemonDEFStatsFullWidth.style.width = pokemon.base['HP'] > 119 ? "119%" : pokemon.base['HP'] + "%"
+    pokemonDEFStatsFullWidth.style.width = pokemon.base['Defense'] > 100 ? "100%" : pokemon.base['Defense'] + "%"
 
     pokemonSPatk.textContent = 'Sp.Atk: ' + pokemon.base['Sp. Attack']
     // pokemonSPatk.style.width = pokemon.base['Sp. Attack'] > 119 ? "119" : pokemon.base['Sp. Attack'] + "%"
-    pokemonSPatkStatsFullWidth.style.width = pokemon.base['HP'] > 119 ? "119%" : pokemon.base['HP'] + "%"
+    pokemonSPatkStatsFullWidth.style.width = pokemon.base['Sp. Attack'] > 100 ? "100%" : pokemon.base['Sp. Attack'] + "%"
 
     pokemonSPdef.textContent = 'Sp.Def: ' + pokemon.base['Sp. Defense']
     // pokemonSPdef.style.width = pokemon.base['Sp. Defense'] > 119 ? "119%" : pokemon.base['Sp. Defense'] + "%"
-    pokemonSPdefStatsFullWidth.style.width = pokemon.base['HP'] > 119 ? "119%" : pokemon.base['HP'] + "%"
+    pokemonSPdefStatsFullWidth.style.width = pokemon.base['Sp. Defense'] > 100 ? "100%" : pokemon.base['Sp. Defense'] + "%"
 
     pokemonSpeed.textContent = 'Speed: ' + pokemon.base['Speed']
     // pokemonSpeed.style.width = pokemon.base['Speed'] > 119 ? "119%" : pokemon.base['Speed'] + "%"
-    pokemonSpeedStatsFullWidth.style.width = pokemon.base['HP'] > 119 ? "119%" : pokemon.base['HP'] + "%"
+    pokemonSpeedStatsFullWidth.style.width = pokemon.base['Speed'] > 100 ? "100%" : pokemon.base['Speed'] + "%"
 
 
 
