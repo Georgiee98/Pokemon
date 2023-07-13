@@ -9,6 +9,12 @@ fetch("source.json")
   subContainer.setAttribute("class", "sub-container");
 
 
+  let pokemonList = data
+  let visiblePokemons = pokemonList
+
+let renderPokemon = (data) => {
+subContainer.innerHTML =  ""
+
   container.appendChild(subContainer);
   data.forEach((pokemon) => {
 
@@ -50,7 +56,7 @@ fetch("source.json")
 
     let details = document.createElement("div");
     details.setAttribute("class", "details");
-    details.style.display = "flex";
+    details.style.display = "none";
 
     main.appendChild(details);
 
@@ -232,8 +238,11 @@ fetch("source.json")
                                                         } else {
                                                         details.style.display = "none";
                                                         }
-                                                        });
-  });
+                                                      });
+                                                    });
+                                                  }
+  renderPokemon(visiblePokemons)
+
 
 });
 
