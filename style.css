@@ -94,7 +94,7 @@ main div {
 .details {
   /* padding-left: 8px; */
 
-  display: flex;
+  /* display: flex; */
   align-items: start;
   transition: 2s ease-in;
   width: 100%;
@@ -225,4 +225,17 @@ main div {
   border-radius: 4px;
   margin: 0px;
   padding: 0px;
+}
+
+.input-container {
+  display:flex;
+  width: 90%;
+  justify-content: center;
+  border: 1px solid black;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+input {
+  width: 50%;
+  align-items: center;
 }

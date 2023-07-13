@@ -1,5 +1,3 @@
-
-
 fetch("source.json")
 .then((res) => res.json())
 .then((data) => {
@@ -194,7 +192,7 @@ fetch("source.json")
 
     // Pokemon Name & Type
     // pokemonName.textContent = pokemon.name["english"];
-    pokemonName.textContent = pokemon.name["english"].Capita;
+    pokemonName.textContent = pokemon.name["english"];
     // console.log(pokemon.type[0], pokemon.type[1], pokemon.type[2])
     pokemonType.textContent = `
     ${pokemon.type[0]}\n${pokemon.type[1] ? ' & ' + pokemon.type[1] : ''}\n${pokemon.type[2] ? ' & ' + pokemon.type[2] : ''}`
@@ -229,7 +227,6 @@ fetch("source.json")
 
                                                         // Toggle
                                                         main.addEventListener("click", () => {
-                                                        let of_on = false;
                                                         if (details.style.display === "none") {
                                                         details.style.display = "flex";
                                                         } else {
@@ -238,6 +235,20 @@ fetch("source.json")
                                                         });
   });
 
-
 });
 
+function search(event) {
+  const searchValue = event.target.value.trim().toLowerCase();
+
+  const pokemonCards = document.querySelectorAll("main");
+
+  pokemonCards.forEach((card) => {
+    const pokemonName = card.querySelector("#name").textContent.toLowerCase();
+
+    if (pokemonName.includes(searchValue)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
