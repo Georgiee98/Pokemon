@@ -246,7 +246,7 @@ function search(event) {
     const pokemonName = card.querySelector("#name").textContent.toLowerCase();
 
     if (pokemonName.includes(searchValue)) {
-      card.style.display = "block";
+      card.style.display = "flex";
     } else {
       card.style.display = "none";
     }
