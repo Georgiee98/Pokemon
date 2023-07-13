@@ -199,7 +199,7 @@ fetch("source.json")
     pokemonName.textContent = pokemon.name["english"];
     // console.log(pokemon.type[0], pokemon.type[1], pokemon.type[2])
     pokemonType.textContent = `
-    ${pokemon.type[0]}  ${pokemon.type[1] ? '& ' + pokemon.type[1] : ''} ${pokemon.type[2] ? ' ' + pokemon.type[2] : ''}`
+    ${pokemon.type[0]}\n${pokemon.type[1] ? ' & ' + pokemon.type[1] : ''}\n${pokemon.type[2] ? ' & ' + pokemon.type[2] : ''}`
 
     // console.log(details.getElementsByTagName('p')[0])
 

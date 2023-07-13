@@ -87,8 +87,10 @@ main div {
   margin: 4px;
   padding: 2px;
 }
-/* #type {
-} */
+#type {
+  align-items: center;
+  text-align: center;
+}
 .details {
   /* padding-left: 8px; */
 
