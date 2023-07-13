@@ -134,6 +134,7 @@ main div {
 }
 
 .screen {
+  gap: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -150,13 +151,13 @@ main div {
 }
 
 @media only screen and (min-width: 1400px) {
-  .screen {
-  }
+
   .sub-container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media only screen and (max-width: 530px) {
+@media only screen and (max-width: 570px) {
+
   .screen {
     gap: 20px;
   }

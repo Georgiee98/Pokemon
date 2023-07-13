@@ -13,8 +13,40 @@
 </head>
 <body>
 <script>
-let str = "120"
-console.log(str > 119 ? "poveke" : "pomalko")
+// let str =  "Mr.bean-ker"
+
+// for(let x = 0; x <= str.length; x++) {
+//   // console.log(str[x])
+//   let newString = ""
+//   if (str[x] == "-") {
+//     str.replace(str[x], ' ')
+//   }
+// }
+// console.log(str)
+let str = "Mr.bean-ker";
+
+for (let x = 0; x < str.length; x++) {
+  if (str[x] === "-") {
+    str = str.replace(str[x], ' ');
+  }
+  if (str[x] === ".") {
+    x++
+    str = str.replace(str[x], str[x].toUpperCase())
+  }
+}
+
+// console.log(str);
+// let str = "Mr.bean-ker";
+
+// for (let x = 0; x < str.length; x++) {
+//   if (str[x] === "-") {
+//     str = str.replace(str[x], ' ');
+//   } else if (str[x] === ".") {
+//     str = str.substring(0, x + 1) + str[x + 1].toUpperCase() + str.substring(x + 2);
+//   }
+// }
+
+console.log(str);
 </script>
 </body>
 </html>

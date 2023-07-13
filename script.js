@@ -14,8 +14,6 @@ fetch("source.json")
   container.appendChild(subContainer);
   data.forEach((pokemon) => {
 
-
-
     // Card Body
     let main = document.createElement("main");
     subContainer.appendChild(main);
@@ -196,7 +194,7 @@ fetch("source.json")
 
     // Pokemon Name & Type
     // pokemonName.textContent = pokemon.name["english"];
-    pokemonName.textContent = pokemon.name["english"];
+    pokemonName.textContent = pokemon.name["english"].Capita;
     // console.log(pokemon.type[0], pokemon.type[1], pokemon.type[2])
     pokemonType.textContent = `
     ${pokemon.type[0]}\n${pokemon.type[1] ? ' & ' + pokemon.type[1] : ''}\n${pokemon.type[2] ? ' & ' + pokemon.type[2] : ''}`
