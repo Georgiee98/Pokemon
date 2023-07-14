@@ -229,8 +229,10 @@ main div {
 
 .input-container {
   display:flex;
-  width: 90%;
+  /* width: 90%; */
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   border: 1px solid black;
   padding: 20px;
   margin-bottom: 20px;
