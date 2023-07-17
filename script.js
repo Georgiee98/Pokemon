@@ -347,15 +347,18 @@ fetch("source.json")
 
 
           // Display Fighters
-          fighterOneDiv.appendChild(main)
-          main.style.border = "none"
-          main.style.padding = "none"
-          main.style.boxShadow = "none"
-          intro.style.borderRight = "none"
-          introBottom.style.display = "none"
-          details.style.display = "none"
-          introIMG.style.width = "100%"
-          slideIcon.style.display = "none"
+          fighterOneDiv.appendChild(introIMG)
+
+          introIMG.style.minHeight = "250px"
+          introIMG.style.minWidth = "250px"
+          introIMG.style.objectFit = "contain"
+          let changeIMG = document.getElementById("imgPlaceHolder")
+          changeIMG.removeAttribute('style')
+
+
+          console.log(document.querySelectorAll("main"))
+          // fighterTwoDiv.appendChild()
+
 
 
 //         const elementsToChange = [main, intro, introBottom, details, introIMG, slideIcon];
