@@ -356,7 +356,31 @@ fetch("source.json")
           changeIMG.removeAttribute('style')
 
 
-          console.log(document.querySelectorAll("main"))
+          const mainElements = document.querySelectorAll('.introIMG'); // Selecting all 'main' elements
+
+        if (mainElements.length > 0) {
+          const randomIndex = Math.floor(Math.random() * mainElements.length);
+          const randomMain = mainElements[randomIndex];
+
+          randomMain.style.minHeight = "250px"
+          randomMain.style.minWidth = "250px"
+          randomMain.style.objectFit = "contain"
+          let changeIMG = document.getElementById("imgPlaceHolder")
+          changeIMG.removeAttribute('style')
+
+
+
+
+          fighterTwoDiv.appendChild(randomMain)
+
+
+
+
+          // Use the 'randomMain' variable to work with the randomly selected 'main' element
+          console.log(randomMain);
+        } else {
+          console.log("No 'main' elements found on the page.");
+        }
           // fighterTwoDiv.appendChild()
 
 
