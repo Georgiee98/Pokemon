@@ -444,13 +444,16 @@ fetch("source.json")
 
           fightingContainer.append(winnerDiv)
 
-          let winner = sumPowerFighter1 > powerFighter2 ? `You WON !! by ${sumPowerFighter1 - powerFighter2}` : `You lost by ${powerFighter2 - sumPowerFighter1} points`
+          let winner = sumPowerFighter1 > powerFighter2 ? `You WON !! by ${sumPowerFighter1 - powerFighter2} more power` : `You lost by ${powerFighter2 - sumPowerFighter1} less power`
           winnerP.textContent = winner
 
           winnerDiv.style.position = 'fixed;'
           winnerDiv.style.top = "0px;"
           winnerP.style.position = 'absolute;'
           winnerP.style.top = '0px;'
+          winnerP.style.color = "white"
+          winnerP.style.fontSize = "40px"
+
           winnerDiv.appendChild(winnerP)
           console.log(winner)
 
