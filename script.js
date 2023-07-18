@@ -268,11 +268,11 @@ fetch("source.json")
 
 
 
-        let cancelFightIcon = document.createElement('img')
-        cancelFightIcon.src = '/assets/cancel-button.png'
-        cancelFightIcon.setAttribute('class', 'cancelFightIcon')
+      let cancelFightIcon1 = document.createElement('img')
+        cancelFightIcon1.src = '/assets/cancel-button.png'
+        cancelFightIcon1.setAttribute('class', 'cancelFightIcon')
 
-        fightDiv.appendChild(cancelFightIcon)
+        fightDiv.appendChild(cancelFightIcon1)
 
 
 
@@ -305,7 +305,7 @@ fetch("source.json")
 
         })
 
-        cancelFightIcon.addEventListener('click', () => {
+        cancelFightIcon1.addEventListener('click', () => {
           fightDiv.style.display = "none"
         })
         noFight.addEventListener('click', () => {
@@ -316,6 +316,7 @@ fetch("source.json")
         yesFight.addEventListener('click', () => {
           console.log(pokemonName.innerHTML)
           fightDiv.style.display = "none"
+
 
           let fightingContainer = document.createElement('div')
           fightingContainer.setAttribute('class','fighting-container')
@@ -347,37 +348,117 @@ fetch("source.json")
 
 
           // Display Fighters
-          fighterOneDiv.appendChild(introIMG)
+          let newIntroIMG = introIMG
+          fighterOneDiv.append(newIntroIMG)
+          // name
+          let pokemonFighter1Name = document.createElement('p')
+          pokemonFighter1Name.textContent = pokemonName.textContent
+          fighterOneDiv.append(pokemonFighter1Name)
 
-          introIMG.style.minHeight = "250px"
-          introIMG.style.minWidth = "250px"
-          introIMG.style.objectFit = "contain"
+          let pokemonFighter1Type = document.createElement('p')
+          pokemonFighter1Type.textContent = pokemonType.textContent
+          fighterOneDiv.append(pokemonFighter1Type)
+
+
+
+
+
+
+
+
+
+
+          // Stats
+          let pokemon1FightStats = [
+            pokemonHP.textContent,
+            pokemonATK.textContent,
+            pokemonDEF.textContent,
+            pokemonSPatk.textContent,
+            pokemonSPdef.textContent,
+            pokemonSpeed.textContent
+          ];
+
+          const sumPowerFighter1 = pokemon1FightStats.reduce((acc, element) => {
+            const number = parseFloat(element.match(/\d+/)[0]);
+            return acc + number;
+          }, 0);
+
+          console.log(sumPowerFighter1);
+
+          let powerFighter1 = document.createElement('p')
+          powerFighter1.textContent = "Power: " + sumPowerFighter1
+          fighterOneDiv.append(powerFighter1)
+
+
+
+          newIntroIMG.style.minHeight = "250px"
+          newIntroIMG.style.minWidth = "250px"
+          newIntroIMG.style.objectFit = "contain"
           let changeIMG = document.getElementById("imgPlaceHolder")
           changeIMG.removeAttribute('style')
 
 
-          const mainElements = document.querySelectorAll('.introIMG'); // Selecting all 'main' elements
 
-        if (mainElements.length > 0) {
-          const randomIndex = Math.floor(Math.random() * mainElements.length);
-          const randomMain = mainElements[randomIndex];
 
-          randomMain.style.minHeight = "250px"
-          randomMain.style.minWidth = "250px"
-          randomMain.style.objectFit = "contain"
+          const pokemonPictureFighter2 = document.querySelectorAll('.introIMG'); // Selecting all 'main' elements
+        const pokemonNameFighter2 = document.querySelectorAll('.intro-bottom #name')
+        const pokemonTypeFighter2 = document.querySelectorAll('.intro-bottom #type')
+        const pokemonStatsFighter2 = document.querySelectorAll('.details')
+
+        if (pokemonPictureFighter2.length > 0) {
+          const randomIndex = Math.floor(Math.random() * pokemonPictureFighter2.length);
+          const randomMain = pokemonPictureFighter2[randomIndex];
+          let newPokemonNameFighter2 = pokemonNameFighter2[randomIndex].textContent
+          let newPokemonTypeFighter2 = pokemonTypeFighter2[randomIndex].textContent
+          let newpokemonStatsFighter2 = pokemonStatsFighter2[randomIndex].textContent
+          // console.log(newpokemonStatsFighter2)
+
+          // console.log(newPokemonNameFighter2)
+          const newRandomMain = randomMain
+
+          newRandomMain.style.minHeight = "250px"
+          newRandomMain.style.minWidth = "250px"
+          newRandomMain.style.objectFit = "contain"
           let changeIMG = document.getElementById("imgPlaceHolder")
           changeIMG.removeAttribute('style')
+// name
+          let pokemonFighter2Name = document.createElement('p')
+          pokemonFighter2Name.textContent = newPokemonNameFighter2
+// Type
+          let pokemonFighter2Type = document.createElement('p')
+          pokemonFighter2Type.textContent = newPokemonTypeFighter2
+// Details
+          let pokemonFighter2Details = document.createElement('p')
+          let powerFighter2 = newpokemonStatsFighter2.match(/\d+/g)?.reduce((acc, val) => acc + parseInt(val), 0) || 0;
+          pokemonFighter2Details.textContent = "Power: " + powerFighter2
+
+
+          fighterTwoDiv.appendChild(newRandomMain)
+          fighterTwoDiv.appendChild(pokemonFighter2Name)
+          fighterTwoDiv.appendChild(pokemonFighter2Type)
+          fighterTwoDiv.appendChild(pokemonFighter2Details)
+
+          let winnerDiv = document.createElement('div')
+
+          let winnerP = document.createElement('p')
+
+          fightingContainer.append(winnerDiv)
+
+          let winner = sumPowerFighter1 > powerFighter2 ? `You WON !! by ${sumPowerFighter1 - powerFighter2}` : `You lost by ${powerFighter2 - sumPowerFighter1} points`
+          winnerP.textContent = winner
+
+          winnerDiv.style.position = 'fixed;'
+          winnerDiv.style.top = "0px;"
+          winnerP.style.position = 'absolute;'
+          winnerP.style.top = '0px;'
+          winnerDiv.appendChild(winnerP)
+          console.log(winner)
 
 
 
 
-          fighterTwoDiv.appendChild(randomMain)
-
-
-
-
-          // Use the 'randomMain' variable to work with the randomly selected 'main' element
-          console.log(randomMain);
+          // Use the 'newRandomMain' variable to work with the randomly selected 'main' element
+          // console.log(newRandomMain);
         } else {
           console.log("No 'main' elements found on the page.");
         }
@@ -399,11 +480,15 @@ fetch("source.json")
 
 
 
+let cancelFightIcon2 = document.createElement('img')
+cancelFightIcon2.src = '/assets/cancel-button.png'
+cancelFightIcon2.setAttribute('class', 'cancelFightIcon')
 
           // Cancel Fighting Experience
-          fightingContainer.appendChild(cancelFightIcon)
-          cancelFightIcon.addEventListener('click' , () => {
+          fightingContainer.appendChild(cancelFightIcon2)
+          cancelFightIcon2.addEventListener('click' , () => {
             fightingContainer.style.display = "none";
+            location.reload()
           })
 
         })

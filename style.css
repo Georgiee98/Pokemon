@@ -423,7 +423,12 @@ input {
   justify-content: space-around;
 }
 .fighterOneDiv,.fighterTwoDiv{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
   background-color: yellow;
-  border-radius: 100%;
+  border-radius: 250%;
   padding: 10%;
 }

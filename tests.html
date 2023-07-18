@@ -45,8 +45,17 @@ for (let x = 0; x < str.length; x++) {
 //     str = str.substring(0, x + 1) + str[x + 1].toUpperCase() + str.substring(x + 2);
 //   }
 // }
+const strr = "HP: 75Attack: 123Defense: 67Sp.Atk: 95Speed: 95";
+const numbers = strr.match(/\d+/g);
 
-console.log(str);
+let sum = 0;
+if (numbers) {
+  numbers.forEach((number) => {
+    sum += parseInt(number);
+  });
+}
+
+console.log(sum);
 </script>
 </body>
 </html>
